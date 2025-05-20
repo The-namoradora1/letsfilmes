@@ -5,6 +5,8 @@ import  Cabecalho from '../../componentes/cabecalho/index.js'
 import Pesquisa from '../../componentes/pesquiza/index.js';
 import Cartaz from '../../componentes/emcarta/index.js';
 import Listaplana from '../../componentes/lista/index.js';
+import DATA from "../../../movies.js";
+import { FlatList } from "react-native-web";
 
 export default function Home() {
     return (<View style={styles.container}>
@@ -18,7 +20,16 @@ export default function Home() {
 
 <Image style={styles.imageBanner} source={require('../../../images/00.jpg')} />
 
-<Listaplana></Listaplana>    
+<FlatList 
+        numColumns={2}
+        data={DATA} 
+        keyExtractor={item => item.id.toString()} 
+        renderItem={({ item }) => (
+            <Listaplana titulo = {item.nome} nota = {item.nota} imagem = {item.image}></Listaplana>    
+
+        )}
+        />
+
     </View>)
 
 
