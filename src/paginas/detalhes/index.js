@@ -1,9 +1,22 @@
-import {View, Text} from "react-native-web";
+import {View, Text, Image} from "react-native-web";
+import { useRoute } from "@react-navigation/native";
+import styles from "./style";
+
 
 export default function Detalhes() {
-    return (<View>
-       <Text>essa tela e de detalhes</Text>         
-    </View>)
 
+    const route = useRoute();
+
+    return (
+        <View>
+            <View>
+                <Image source={route.params.imagem} style={styles.movieImage}>
+            </Image>
+
+            </View>
+            <Text style={styles.Titulos}> {route.params.titulo}  </Text>
+            <Text>Nota: {route.params.nota}</Text>
+        </View>
+    )
 
 }

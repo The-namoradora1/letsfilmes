@@ -1,4 +1,4 @@
-import {View, Text,Image} from "react-native";
+import {View,Image} from "react-native";
 import React from 'react';
 import styles from '../../../style.js';
 import  Cabecalho from '../../componentes/cabecalho/index.js'
@@ -20,14 +20,14 @@ export default function Home() {
 
 <Image style={styles.imageBanner} source={require('../../../images/00.jpg')} />
 
-<FlatList 
-        numColumns={2}
-        data={DATA} 
-        keyExtractor={item => item.id.toString()} 
-        renderItem={({ item }) => (
-            <Listaplana titulo = {item.nome} nota = {item.nota} imagem = {item.image}></Listaplana>    
-
-        )}
+<FlatList
+            data={DATA}
+            numColumns={2}
+            keyExtractor={item => item.id}
+            renderItem={({ item }) => (
+              
+                <Listaplana titulo ={ item.nome} nota = {item.nota} imagem = {item.image}> </Listaplana>
+            )}
         />
 
     </View>)
