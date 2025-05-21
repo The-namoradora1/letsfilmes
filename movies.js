@@ -3,7 +3,12 @@ const DATA =
     id: '01',
     nome: 'O Show de Truman',
     nota: '8.1',
-    image: require ('./images/01.jpg')
+    image: require ('./images/01.jpg'),
+    descricao: 'Truman Burbank (Jim Carrey) vive uma vida aparentemente perfeita, mas começa a perceber que tudo ao seu redor é uma encenação. Ele descobre que sua vida inteira é transmitida ao vivo para o mundo, e ele é o único que não sabe disso.',
+    Categoria: 'Comédia, Drama',
+    Duração: '1h 43min'
+    
+
 },
 
 {
