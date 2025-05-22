@@ -3,19 +3,25 @@ import { useRoute } from "@react-navigation/native";
 import styles from "./style";
 
 
+
+
+
 export default function Detalhes() {
 
     const route = useRoute();
 
+
     return (
-        <View>
+        
+        <View style={styles.fundo}>
             <View>
                 <Image source={route.params.imagem} style={styles.movieImage}>
             </Image>
 
             </View>
             <Text style={styles.Titulos}> {route.params.titulo}  </Text>
-            <Text>Nota: {route.params.nota}</Text>
+            <Text style={styles.notas}> Nota {route.params.nota}</Text>
+
         </View>
     )
 
