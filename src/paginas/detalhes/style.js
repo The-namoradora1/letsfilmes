@@ -5,33 +5,45 @@ const largura = Dimensions.get('window').width / 2
 const styles = StyleSheet.create ({ 
 
     movieImage: {
+        alignItems: "center",
+        left:'13%',
         width: 330, 
         height: 390,
-        left: '4%',
         marginBottom: 10, 
         marginTop: 30,
       },
 
       Titulos: {
-        fontSize: 30,
+        fontSize: 32,
         fontWeight: "bold",
         color: "white",
         textAlign: "center",
       },
 
-      notas:{
-        fontSize: 20,
-        fontWeight: "black",
+      infos:{
+        fontSize: 13,
+        fontWeight: "bold",
+        color: "white",
+        textAlign: "center",
+        marginTop: 10,
+      },
+
+      fundo:{
+        backgroundColor: '#141a29',
+        width: '100%',
+        height: '100%',
+
+      },
+
+      
+      Descricao:{
+        fontSize: 15,
+        marginTop: 10,
         color: "white",
         textAlign: "center",
       },
 
-      fundo:{
- backgroundColor: '#141a29',
- width: '100%',
- height: '100%',
-
-      }
+      
 
   
 

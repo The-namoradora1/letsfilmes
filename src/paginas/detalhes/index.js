@@ -19,8 +19,10 @@ export default function Detalhes() {
             </Image>
 
             </View>
-            <Text style={styles.Titulos}> {route.params.titulo}  </Text>
-            <Text style={styles.notas}> Nota {route.params.nota}</Text>
+            <Text style={styles.Titulos}> {route.params.titulo} </Text>
+            <Text style={styles.infos}> Nota {route.params.nota} | Categoria: {route.params.categoria} | Duração: {route.params.duracao}</Text>
+            <Text style={styles.Descricao}>{route.params.descricao}</Text> 
+
 
         </View>
     )

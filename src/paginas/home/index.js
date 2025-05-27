@@ -26,7 +26,7 @@ export default function Home() {
             keyExtractor={item => item.id}
             renderItem={({ item }) => (
               
-                <Listaplana titulo ={ item.nome} nota = {item.nota} imagem = {item.image}> </Listaplana>
+                <Listaplana titulo ={ item.nome} nota = {item.nota} imagem = {item.image} descricao = {item.descricao} categoria = {item.categoria} duracao = {item.duracao}> </Listaplana>
             )}
         />
 
