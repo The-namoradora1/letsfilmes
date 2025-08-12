@@ -10,7 +10,7 @@ export default function Listaplana({titulo, descricao, duracao, categoria, nota,
     return (
 
       <TouchableOpacity style={styles.butao} onPress = {() => navigation.navigate('Detalhes', {titulo, descricao, duracao, categoria, nota, imagem})}>
-      <Image source={imagem} style={styles.movieImage} />
+      <Image source={{uri : 'https://image.tmdb.org/t/p/original/${imagem}'}} style={styles.movieImage} />
       <Text style={styles.movieText}>{titulo} - Nota: {nota}</Text>
     </TouchableOpacity>
 
