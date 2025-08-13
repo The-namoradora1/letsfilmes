@@ -15,13 +15,13 @@ export default function Detalhes() {
         
         <View style={styles.fundo}>
             <View>
-                <Image source={route.params.imagem} style={styles.movieImage}>
+                <Image source={{uri : `https://image.tmdb.org/t/p/original/${route.params.image}`}}  style={styles.movieImage}>
             </Image>
 
             </View>
             <Text style={styles.Titulos}> {route.params.titulo} </Text>
-            <Text style={styles.infos}> Nota {route.params.nota} | Categoria: {route.params.categoria} | Duração: {route.params.duracao}</Text>
-            <Text style={styles.Descricao}>{route.params.descricao}</Text> 
+            <Text style={styles.infos}> Nota {route.params.nota} | Lançamento: {route.params.release_date} | Duração: {route.params.duracao}</Text>
+            <Text style={styles.Descricao}>{route.params.overview}</Text> 
 
 
         </View>

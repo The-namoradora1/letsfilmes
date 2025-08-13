@@ -56,7 +56,7 @@ buscarFilmes();
             keyExtractor={item => item.id}
             renderItem={({ item }) => (
               
-                <Listaplana titulo ={ item.title} nota = {item.vote_avarege} imagem = {item.poster_path} > </Listaplana>
+                <Listaplana titulo ={ item.title} nota = {item.vote_average} image = {item.poster_path} > </Listaplana>
             )}
         />
 
