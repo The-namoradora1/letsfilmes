@@ -4,8 +4,8 @@ const largura = Dimensions.get('window').width / 2
 
 const styles = StyleSheet.create ({
   butao: {
-    pandingTop: 20,
-    paddingBottom: 16, 
+    pandingTop: 2,
+    paddingBottom: 1, 
     paddingRight: 8,
     paddingLeft: 8, 
     alignItems: "center", 
@@ -16,19 +16,19 @@ const styles = StyleSheet.create ({
     movieItem: {
         flex: 1,
         alignItems: "center", 
-        margin: 10,
+        margin: 1,
         backgroundColor: "Gray", 
-        borderRadius: 10, 
-        padding: 10,
+        borderRadius: 1, 
+        padding: 1,
       },
       movieImage: {
         width: 150, 
-        height: 200,
-        borderRadius: 10,
-        marginBottom: 10, 
+        height: 190,
+        borderRadius: 1,
+        marginBottom: 1, 
       },
       movieText: {
-        fontSize: 16,
+        fontSize: 10,
         fontWeight: "bold",
         color: "white",
         textAlign: "center",

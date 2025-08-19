@@ -39,6 +39,35 @@ buscarFilmes();
 
 
 
+const[series,setSeries]= useState([]);
+useEffect(()=>{
+
+    async function buscarSeries() {
+          
+  const url = 'https://api.themoviedb.org/3/tv/top_rated?language=pt-br-US&page=1';
+        const options = {
+        method: 'GET',
+        headers: {
+        accept: 'application/json',
+        Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJkMzU5MDUzNDk1MmFhMzdkZjljZjY3ZGMxM2YyM2I3OSIsIm5iZiI6MTc1NTAyMTU1MC45NDU5OTk5LCJzdWIiOiI2ODliODBlZWQwNmZhMzQzNTkyNjg0OWIiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.6og3MATogNpCnyBEPjSoiHYhztCr_TqrCBQgIu9LfH8'}
+}
+
+const response =await fetch(url,options);
+const data = await response.json();
+console.log(data);
+
+setSeries(data.results);
+
+};
+
+buscarSeries();
+
+
+})
+
+
+
+
     return (<View style={styles.container}>
       
        
@@ -49,17 +78,32 @@ buscarFilmes();
  <Cartaz></Cartaz>
 
 <Image style={styles.imageBanner} source={require('../../../images/00.jpg')} />
-
+<View style={{width: '100%', height: '60%'}}>
 <FlatList
             data={movies}
-            numColumns={2}
+            numColumns={1}
+            horizontal={true}
+            showsHorizontalScrollIndicator={false}
             keyExtractor={item => item.id}
             renderItem={({ item }) => (
               
-                <Listaplana titulo ={ item.title} nota = {item.vote_average} image = {item.poster_path} > </Listaplana>
+                <Listaplana titulo ={ item.title} nota = {item.vote_average} image = {item.poster_path} Descricao = {item.overview} lancamento ={item.release_date} > </Listaplana>
             )}
         />
 
+<FlatList
+            data={series}
+            numColumns={1}
+            showsHorizontalScrollIndicator={false}
+            horizontal={true}
+            keyExtractor={item => item.id}
+            renderItem={({ item }) => (
+              
+                <Listaplana titulo ={ item.name} nota = {item.vote_average} image = {item.poster_path} Descricao = {item.overview} lancamento ={item.first_air_date} > </Listaplana>
+            )}
+        />
+
+        </View>
     </View>)
 
 
